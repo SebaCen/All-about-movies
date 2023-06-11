@@ -121,7 +121,7 @@ def recomendacion(titulo):
     
     try:
         semilla = random.randint(0, 1000)
-        movies_wc_small = movies_wc.sample(frac=0.25, random_state=semilla)
+        movies_wc_small = movies_wc.sample(frac=0.1, random_state=semilla)
         #movies_wc_small = movies_wc_small.append(movies_wc[movies_wc['title']==titulo])
         movies_wc_small = pd.concat([movies_wc_small, movies_wc[movies_wc['title']==titulo]], ignore_index=True)
         movies_wc_small.drop_duplicates(subset=['title'], inplace=True)
