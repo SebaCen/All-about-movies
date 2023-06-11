@@ -9,8 +9,8 @@ url = 'https://drive.google.com/file/d/1QuvhMiZLka18ZXnx8o1P5C8Cf5oHCgjL/view?us
 url = 'https://drive.google.com/uc?id=' + url.split('/')[-2]
 meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre']
 app = FastAPI()
-movies_wc = pd.read_csv(url) 
-movies_wc['release_date'] = pd.to_datetime(movies_wc['release_date'])
+movies_wc = pd.read_parquet('movies_cleaned.parquet') 
+#movies_wc['release_date'] = pd.to_datetime(movies_wc['release_date'])
 
 @app.get('/')
 def message():
