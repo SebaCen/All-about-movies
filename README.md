@@ -6,10 +6,12 @@ y realizar varias consultas, ademas se genera un sistema de recomendación de pe
 <p align=center><img src="https://github.com/hikikae/From-ETL-to-Machine-Learning/blob/main/images/proceso.jpg"><p> <br> 
   
  ## Introducción
- Se trabaja sobre el siguiente dataset de <a href="https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset">Kaggle</a>, el mismo es
-  un dataset muy completo y detallado con alrededor de 45.000 peliculas de todos los tiempos. 
-  Para realizar el proyecto se requiere extraer los datos, adecuarlos y disponibilizarlos, para que las siguientes etapas que son las del analisis de los mismos se pueda hacer adecuadamente. 
+ Se trabaja sobre el siguiente dataset de <a href="https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset">Kaggle</a>, el mismo es un dataset muy completo y detallado con alrededor de 45.000 peliculas de todos los tiempos. 
+  
+Para realizar el proyecto se requiere extraer los datos, adecuarlos y disponibilizarlos, para que las siguientes etapas que son las del analisis de los mismos se pueda hacer adecuadamente.
+  
   Tambien para que cualquier persona interesada pueda interactuar realizandoles consultas a traves de la nube. 
+  
   En este repositorio encontraras las diferentes herramientas con las que se fueron desarrollando cada una de las etapas 
   definidas en el proyecto, se detalla la tabla de contenidos:
   
@@ -31,7 +33,7 @@ etapas posteriores
 ## <a href="[https://github.com/hikikae/From-ETL-to-Machine-Learning/blob/main/Parte1-ETL.ipynb](https://github.com/hikikae/From-ETL-to-Machine-Learning/blob/main/Parte2-Consultas_y_API.ipynb)">EDA</a>
 Una vez que se asegura la calidad de los datos de entrada se pasa al analisis de los mismos (EDA) y se extrae mucha informacion valiosa como por ejemplo:
   
-  - Cuantos datos faltantes hay en que atributos se encuentran?
+  - Cuantos datos faltantes hay, y en que atributos se encuentran?
   - Hay datos atipicos, y si es asi en que atributos estan?
   - Cuantas peliculas hay por genero?
   - Que director dirigio mas peliculas?
@@ -43,7 +45,7 @@ Una vez que se asegura la calidad de los datos de entrada se pasa al analisis de
   
  
 ## API
-Y para hacerlo un poco mas dinamico se hace una API en FastAPI para poder realizar consultas relacionadas con las peliculas, se hace un deploy en Render para hacer disponibles esas consultas en la nube y que cualquier persona pueda utilizarla desde el lugar donde se encuentre y con cualquier dispositivo con el que cuente.  
+Y para hacerlo un poco mas dinamico se hace una API en FastAPI para poder realizar consultas relacionadas con las peliculas, se hace un deploy en Render para hacer disponibles esas consultas en la nube y que cualquier persona pueda utilizarla desde el lugar donde se encuentre y con cualquier dispositivo que cuente.  
    
 <a href="https://deta.space/discovery/r/r1z3sqkuowog8y3r"><img width="70%" src="https://github.com/hikikae/From-ETL-to-Machine-Learning/blob/main/images/api%20consultas.png"></a>
   
@@ -67,7 +69,9 @@ Las consultas que se le pueden realizar a la API son las siguientes:
   
 ## <a href="https://github.com/hikikae/From-ETL-to-Machine-Learning/blob/main/Parte4-ML%20y%20Gradio.ipynb">ML</a> 
 
-  Para realizar un sistema de recomendacion de peliculas se utilizo Machine Learning en particular el metodo de similitud del coseno, usando el resumen de la pelicula mas la frase celebre asociada a tal pelicula y son esto se busco similaridades con el resto de las peliculas del dataset. Se decidio trabaj con un dataset reducido aleatoriamente para que cada vez que se le pide una recomendacion pueda dar resultados similares pero diferentes entre si ya que las peliculas con las que busca la similitud van cambiando constantemente.
+  Para realizar un sistema de recomendacion de peliculas se utilizo Machine Learning en particular el metodo de similitud del coseno, usando el resumen de la pelicula y la frase celebre asociada a tal pelicula como datos de entrada. Con esto se busco similaridades con el resto de las peliculas del dataset. 
+  
+Se decidio trabajar con un dataset reducido aleatoriamente para que cada vez que se le pide una recomendación, pueda dar resultados similares pero diferentes entre si, ya que las peliculas con las que busca la similitud van cambiando constantemente.
 
 <img width="70%" src="https://github.com/hikikae/From-ETL-to-Machine-Learning/blob/main/images/gradio.png">
  
@@ -86,6 +90,7 @@ Espero te haya gustado el proyecto y no dudes en consultarme cualquier duda. Gra
 
  ## Contacto
 Sebastián Centurión 
+  
 mail:  sebastian.centurion@gmail.com 
 
   
