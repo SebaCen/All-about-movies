@@ -6,7 +6,7 @@ y realizar varias consultas, ademas se genera un sistema de recomendación de pe
 <p align=center><img src="https://github.com/hikikae/From-ETL-to-Machine-Learning/blob/main/images/proceso.jpg"><p> <br> 
   
  ## Introducción
- Se trabaja sobre el siguiente dataset de Kaggle <a href="https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset"></a>, el mismo es
+ Se trabaja sobre el siguiente dataset de <a href="https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset">Kaggle</a>, el mismo es
   un dataset muy completo y detallado con alrededor de 45.000 peliculas de todos los tiempos. Para realizar el proyecto se requiere extraer los datos, adecuarlos y disponibilizarlos para que las siguientes etapas que son las del analisis de los mismos se pueda hacer adecuadamente. Tambien para que cualquier persona interesada pueda interactuar realizandoles consultas a traves de la nube. 
   En este repositorio encontraras las diferentes herramientas con las que se fueron desarrollando cada una de las etapas 
   definidas en el proyecto, se detalla la tabla de contenidos:
