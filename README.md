@@ -53,34 +53,19 @@ Al ingresar podrás ver un menu con consultas, elige alguna de ellas, para proba
   
 <img width= "70%" src="https://github.com/hikikae/From-ETL-to-Machine-Learning/blob/main/images/probandoConsulta.gif">
   
-## EDA
-El EDA nos permite familiarizarnos aún más con los daos, podemos conocer si hay errores, duplicados, valores faltantes, relaciones, entre otros. Uno de los problemas que me enfrenté al usar un dataset tan grande (1.5GB) es que mi computadora no tenia la suficiente capacidad, por lo que tuve que recurrir a tomar solo una muestra y así explorar las librerias especiales para el EDA, como son *pandas profiling, sweetviz, autoviz. Los reportes html que se generan puedes encontrarlos en esta <a href="https://github.com/hikikae/From-ETL-to-Machine-Learning/tree/main/Reportes%20EDA">carpeta<a>. 
-
-- <a href="https://github.com/hikikae/From-ETL-to-Machine-Learning/blob/main/Parte3-EDA-1.ipynb">Parte 1.</a> Utilizando todos los datos (1.5GB)
-- <a href="https://github.com/hikikae/From-ETL-to-Machine-Learning/blob/main/Parte3-EDA-2.ipynb">Parte 2. </a> Tomando una muestra <br>
+Las consultas que se le pueden realizar a la API son las siguientes:
   
-<img width= "50%" src="https://github.com/hikikae/From-ETL-to-Machine-Learning/blob/main/images/reporteEDA.png"> <br>
- 
-<img width= "30%" height="200px" src="https://github.com/hikikae/From-ETL-to-Machine-Learning/blob/main/images/grafica.png"> <img height="200px" width= "30%" src="https://github.com/hikikae/From-ETL-to-Machine-Learning/blob/main/images/violin.png">
-
-## <a href="https://github.com/hikikae/From-ETL-to-Machine-Learning/blob/main/Parte3-PreML.ipynb">PreML</a>
-Una vez que tuve el EDA me encontré con nuevas interogantes como son:
+  - Cantidad de peliculas estrenadas por dia de la semana
+  - Cantidad de peliculas estrenadas por mes del año
+  - Popularidad de una pelicula determinada
+  - Puntaje promedio de reseña de una pelicula determinada
+  - Cantidad de peliculas en las que participo un actor/actriz determinado y el exito del mismo
+  - Cantidad de peliculas que dirigio determinado director y el listado de las mismas junto con su respectivo exito
   
-- Numero de peliculas que ha calificado cada usuario
-- Distribución de las calificaciones
-- Película que más calificaciones tiene
-- Película que menos calificaciones tiene
-- Película más vista
-
-Me pareció importante mencionar estos hallazgos y te invito a que los revises.
   
 ## <a href="https://github.com/hikikae/From-ETL-to-Machine-Learning/blob/main/Parte4-ML%20y%20Gradio.ipynb">ML</a> 
-Para realizar una recomendación de una película, utilice un filtro colaborativo basado en SVD (Descomposción en Valores singulares), que sirve para reducir la dimensionalidad que para el caso de tanto volumen de datos, acorta los tiempos de procesamiento y la librerría Surprise que ayuda a aplicar los algoritmos de recomendadion. 
-  
-Este enfoque colaborativo se basa en la idea de que los usuarios con gustos similares calificarán de manera similar las mismas películas. 
 
-## Gradio y Hugging Face
-En el notebook anterior al final encontrarás el código que utilicé para cargar el modelo de ML utilicé Gradio y lo deployé por medio de Hugging Face.
+  Para realizar un sistema de recomendacion de peliculas se utilizo Machine Learning en particular el metodo de similitud del coseno, usando el resumen de la pelicula mas la frase celebre asociada a tal pelicula y son esto se busco similaridades con el resto de las peliculas del dataset. Se decidio trabaj con un dataset reducido aleatoriamente para que cada vez que se le pide una recomendacion pueda dar resultados similares pero diferentes entre si ya que las peliculas con las que busca la similitud van cambiando constantemente.
 
 <img width="70%" src="https://github.com/hikikae/From-ETL-to-Machine-Learning/blob/main/images/gradio.png">
  
@@ -94,27 +79,13 @@ Te muestro como hacer una prueba con los datos más básicos:
 <img width="70%" src="https://github.com/hikikae/From-ETL-to-Machine-Learning/blob/main/images/recomendacionML.gif">
 
   
-## <a href="https://github.com/hikikae/From-ETL-to-Machine-Learning/tree/main/dataset"> Datos Iniciales</a>
-    - Plataformas
-        - amazon_prime_titles.csv
-        - disney_plus_titles.csv
-        - hulu_titles.csv
-        - netflix_titles.csv
-    - Ratings
-        - 1.csv
-        - 2.csv
-        - 3.csv
-        - 4.csv
-        - 5.csv
-        - 6.csv
-        - 7.csv
-        - 8.csv
+## Agradecimiento
+Espero te haya gustado el proyecto y no dudes en consultarme cualquier duda. Gracias.
 
-## Agradecimiento y Contacto
-Gracias por interesarte en mi proyecto y si tienes alguna duda no dudes en contactarte conmigo.
+ ## Contacto
+Sebastián Centurión 
+mail:  sebastian.centurion@gmail.com 
 
-Angélica García Díaz ---- <a href="https://www.linkedin.com/in/angelica-garc%C3%ADa-diaz/">LinkedIn </a>, mail:  angelicagarciad@gmail.com <br>
-
- 😇
+  
                         
      
