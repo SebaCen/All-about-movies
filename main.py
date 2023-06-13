@@ -7,8 +7,7 @@ import ast
 from fastapi import FastAPI
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 from sklearn.metrics.pairwise import linear_kernel, cosine_similarity, sigmoid_kernel
-from fastapi.responses import JSONResponse
-from fastapi.encoders import jsonable_encoder
+
 
 meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre']
 dias = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo']
@@ -146,6 +145,3 @@ def recomendacion(titulo):
     except KeyError:
         return {'Error':'Lo sentimos, la pelicula no esta en el catalogo'}
 
-print(get_director('James Cameron'))
-print(votos_titulo('Avatar'))
-print(score_titulo('Jumanji'))
