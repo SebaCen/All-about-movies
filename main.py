@@ -7,6 +7,8 @@ import ast
 from fastapi import FastAPI
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 from sklearn.metrics.pairwise import linear_kernel, cosine_similarity, sigmoid_kernel
+from fastapi.responses import JSONResponse
+from fastapi.encoders import jsonable_encoder
 
 meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre']
 dias = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo']
@@ -51,7 +53,7 @@ def score_titulo(titulo:str):
         titulo_pelicula = movie['title'].iloc[0]                                        #Se guarda el titulo de la pelicula
         anio = movie['release_year'].iloc[0]                                            #Se guarda el año de lanzamiento de la pelicula
         popularidad = movie['popularity'].iloc[0]                                       #Se guarda la popularidad
-        return {'titulo': titulo_pelicula,'año': anio,'popularidad': popularidad.round(2)}
+        return {'titulo': f'{titulo_pelicula}','año': f'{anio}','popularidad': f'{popularidad.round(2)}'}
     except IndexError:
         return {'Error': 'Lo sentimos, la pelicula no esta en nuestro catalogo'}
                 
@@ -67,7 +69,7 @@ def votos_titulo(titulo:str):
         promedio = movie['vote_average'].iloc[0]                                        #Se guarda el puntaje promedio obtenido de las reseñas
 
         if votos >= 2000:                                                               #Si la cantidad de votos recibidos es mayor a 2000 retorno los valores guardados previamente
-            return {'titulo':titulo_pelicula, 'año':anio,'voto_total':votos, 'voto_promedio':promedio}
+            return {'titulo': f'{titulo_pelicula}', 'año': f'{anio}','voto_total':f'{votos}', 'voto_promedio':f'{promedio}'}
     except IndexError:
         return {'Error':'La pelicula no esta en el catalogo o no tiene suficientes valoraciones'}
     
@@ -89,12 +91,12 @@ def get_actor(nombre_actor:str):
         lista_return = [movies_wc['return'].iloc[_] for _ in lista_indices]              #Se listan todos los retornos que tuvo el actor
         valor_max = max(lista_return)                                                    #Se elige el mayor
         indice_max_return = lista_indices[lista_return.index(valor_max)]                 #Se guarda el indice que tuvo el maximo para poder devolver el maximo retorno
-        return {'actor': nombre_actor,'movie_count': cant_peli,
-        'max_return': movies_wc.iloc[indice_max_return]["return"].round(2), 
-        'average_return': ret_prom}
+        return {'actor': f'{nombre_actor}','movie_count': f'{cant_peli}',
+        'max_return': f'{movies_wc.iloc[indice_max_return]["return"].round(2)}', 
+        'average_return': f'{ret_prom}'}
     else:
         return {'Error': 'Actor no encontrado, ingrese actor/actiz nuevamente, por ejemplo: Tom Hanks'}
-
+    
 
 @app.get('/get_director/{nombre_director}')
 def get_director(nombre_director:str):
@@ -108,12 +110,13 @@ def get_director(nombre_director:str):
         lista_presupuesto = [movies_wc['budget'].iloc[_] for _ in lista_indices]           #Se guardan los presupuestos
         lista_retorno = [movies_wc['return'].iloc[_] for _ in lista_indices]               #Se guardan los retornos
         retorno_total = sum(lista_retorno)                                                 #Se suman los retornos
-        return {'director': nombre_director,'retorno_total_director': retorno_total,
-                'peliculas': lista_movies,'anio': lista_anios,'retorno_pelicula': lista_retorno,
-                'budget_pelicula': lista_presupuesto,'revenue_pelicula': lista_ganancia }
+        return {'director': f'{nombre_director}','retorno_total_director': f'{retorno_total}',
+                'peliculas': lista_movies,'anio': f'{lista_anios}','retorno_pelicula': f'{lista_retorno}',
+                'budget_pelicula': f'{lista_presupuesto}','revenue_pelicula': f'{lista_ganancia}' }
     else:
-        return {'Error':'Director/a no encontrado/a, ingrese director/a nuevamente, por ejemplo: James Cameron'}    
-    
+        return {'Error':'Director/a no encontrado/a, ingrese director/a nuevamente, por ejemplo: James Cameron'}
+
+
 @app.get('/recomendacion/{titulo}')
 def recomendacion(titulo):
     
@@ -143,6 +146,6 @@ def recomendacion(titulo):
     except KeyError:
         return {'Error':'Lo sentimos, la pelicula no esta en el catalogo'}
 
-
-print(get_director('Woody Allen'))
-print(recomendacion('Minions'))
+print(get_director('James Cameron'))
+print(votos_titulo('Avatar'))
+print(score_titulo('Jumanji'))
