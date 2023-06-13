@@ -45,26 +45,38 @@ Una vez que se asegura la calidad de los datos de entrada se pasa al analisis de
  
 ##  <a href="https://github.com/SebaCen/All-about-movies/blob/main/main.py">API</a>
 Y para hacerlo un poco mas dinamico se hace una API en FastAPI para poder realizar consultas relacionadas con las peliculas, se hace un deploy en Render para hacer disponibles esas consultas en la nube y que cualquier persona pueda utilizarla desde el lugar donde se encuentre y con cualquier dispositivo que cuente.  
-   
-<a href="https://deta.space/discovery/r/r1z3sqkuowog8y3r"><img width="70%" src="https://github.com/hikikae/From-ETL-to-Machine-Learning/blob/main/images/api%20consultas.png"></a>
+
+https://all-about-movies-mv2h.onrender.com/
   
-Una vez que ingreses agrega ("/docs") a la direccion url:<br>
-  
-<img src="https://github.com/hikikae/From-ETL-to-Machine-Learning/blob/main/images/ingresar%20consultas.png">
-  
-Al ingresar podrás ver un menu con consultas, elige alguna de ellas, para probarla.
-  
-<img width= "70%" src="https://github.com/hikikae/From-ETL-to-Machine-Learning/blob/main/images/probandoConsulta.gif">
+Una vez que se ingresa se puede agregar ("docs") al final de la url y se podran hacer consultas a traves de interface para tal fin
+ 
+ 
   
 Las consultas que se le pueden realizar a la API son las siguientes:
   
-  - Cantidad de peliculas estrenadas por dia de la semana
   - Cantidad de peliculas estrenadas por mes del año
+  
+  'https://all-about-movies-mv2h.onrender.com/cantidad_filmaciones_mes/Junio'
+  
+  - Cantidad de peliculas estrenadas por dia de la semana
+  
+  'https://all-about-movies-mv2h.onrender.com/cantidad_filmaciones_dia/jueves'
+  
   - Popularidad de una pelicula determinada
+ 
+  'https://all-about-movies-mv2h.onrender.com/score_titulo/Minions' 
+  
   - Puntaje promedio de reseña de una pelicula determinada
+  
+  'https://all-about-movies-mv2h.onrender.com/votos_titulo/American%20Pie'
+  
   - Cantidad de peliculas en las que participo un actor/actriz determinado y el exito del mismo
+  
+  'https://all-about-movies-mv2h.onrender.com/get_actor/Robert%20Redford'
+  
   - Cantidad de peliculas que dirigio determinado director y el listado de las mismas junto con su respectivo exito
   
+  'https://all-about-movies-mv2h.onrender.com/get_director/Woody%20Allen'
   
 ## <a href="https://github.com/SebaCen/All-about-movies/blob/main/All_About_Movies_Funciones.ipynb">ML</a> 
 
@@ -72,18 +84,10 @@ Las consultas que se le pueden realizar a la API son las siguientes:
   
 Se decidio trabajar con un dataset reducido aleatoriamente para que cada vez que se le pide una recomendación, pueda dar resultados similares pero diferentes entre si, ya que las peliculas con las que busca la similitud van cambiando constantemente.
 
-<img width="70%" src="https://github.com/hikikae/From-ETL-to-Machine-Learning/blob/main/images/gradio.png">
- 
-  
-Antes de hacer una prueba revisemos rápidamente algunos identificadores de películas.
+https://all-about-movies-mv2h.onrender.com/recomendacion/Shrek
 
-<img width="70%" src="https://github.com/hikikae/From-ETL-to-Machine-Learning/blob/main/images/titulosPeliculas.png">
-  
-  
-Te muestro como hacer una prueba con los datos más básicos:
-<img width="70%" src="https://github.com/hikikae/From-ETL-to-Machine-Learning/blob/main/images/recomendacionML.gif">
 
-  
+
 ## Agradecimiento
 Espero te haya gustado el proyecto y no dudes en consultarme cualquier duda. Gracias.
 
