@@ -10,9 +10,9 @@ y realizar varias consultas, ademas se genera un sistema de recomendación de pe
  ## Introducción
  Se trabaja sobre el siguiente dataset de <a href="https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset">Kaggle</a>, el mismo es un dataset muy completo y detallado con alrededor de 45.000 peliculas de todos los tiempos. 
   
-Para realizar el proyecto se requiere extraer los datos, adecuarlos y disponibilizarlos, para que las siguientes etapas que son las del analisis de los mismos se pueda hacer adecuadamente.
+Para realizar el proyecto se requiere extraer los datos, adecuarlos y disponibilizarlos, para que las siguientes etapas que son las del analisis de los mismos se puedan hacer adecuadamente.
   
-  Tambien para que cualquier persona interesada pueda interactuar realizandoles consultas a traves de la nube. 
+  Tambien para que cualquier persona interesada pueda interactuar realizandole consultas a traves de la nube. 
   
   En este repositorio encontraras las diferentes herramientas con las que se fueron desarrollando cada una de las etapas 
   definidas en el proyecto, se detalla la tabla de contenidos:
@@ -26,7 +26,7 @@ Para realizar el proyecto se requiere extraer los datos, adecuarlos y disponibil
   
 ## <a href="https://github.com/SebaCen/All-about-movies/blob/main/All_About_Movies_ETL.ipynb">ETL </a>
 
-Se comienza haciento un proceso de Extracción, Transformación y Carga (ETL) para limpiar el dataset de datos anomalos y desanidar columnas que vienen de esa manera en el original, tambien se adecuan los formatos acordes a las consultas que se le van a relizar posteriormente, y por ultimo se cargan en diferentes archivos para el posterior uso de los mismos de acuerdo los requerimientos de las
+Se comienza haciendo un proceso de Extracción, Transformación y Carga (ETL) para limpiar el dataset de datos anomalos y desanidar columnas que vienen de esa manera en el original, tambien se adecuan los formatos acordes a las consultas que se le van a realizar posteriormente, y por ultimo se cargan en diferentes archivos para el posterior uso de los mismos de acuerdo a los requerimientos de las
 etapas posteriores
   
 ## <a href="https://github.com/SebaCen/All-about-movies/blob/main/All_About_Movies_EDA.ipynb">EDA</a>
@@ -46,9 +46,11 @@ Una vez que se asegura la calidad de los datos de entrada se pasa al analisis de
 ##  <a href="https://github.com/SebaCen/All-about-movies/blob/main/main.py">API</a>
 Y para hacerlo un poco mas dinamico se hace una API en FastAPI para poder realizar consultas relacionadas con las peliculas, se hace un deploy en Render para hacer disponibles esas consultas en la nube y que cualquier persona pueda utilizarla desde el lugar donde se encuentre y con cualquier dispositivo que cuente.  
 
+Link de la API:
+
 https://all-about-movies-mv2h.onrender.com/
   
-Una vez que se ingresa se puede agregar ("docs") al final de la url y se podran hacer consultas a traves de interface para tal fin
+Una vez que se ingresa se puede agregar ("docs") al final de la url y se podran hacer consultas a traves de una interface para tal fin
  
  
   
