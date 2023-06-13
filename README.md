@@ -91,7 +91,7 @@ Espero te haya gustado el proyecto y no dudes en consultarme cualquier duda. Gra
  ## Contacto
 Sebastián Centurión 
   
-mail:  sebastian.centurion@gmail.com 
+e-mail:  sebastian.centurion@gmail.com 
 
   
                         
