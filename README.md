@@ -3,7 +3,9 @@
 A partir de un dataset de peliculas se hace un analisis exploratorio del mismo luego de un proceso de ETL, se genera una API para poder interactuar 
 y realizar varias consultas, ademas se genera un sistema de recomendación de peliculas aplicando Machine Larning<br> <br>
 
-<p align=center><img src="https://github.com/hikikae/From-ETL-to-Machine-Learning/blob/main/images/proceso.jpg"><p> <br> 
+<p align=center><img src="[https://github.com/hikikae/From-ETL-to-Machine-Learning/blob/main/images/proceso.jpg]"><p> <br> 
+  
+  <p align=center><img src="[https://github.com/SebaCen/All-about-movies/blob/main/src/Portada.jpg]"><p> <br> 
   
  ## Introducción
  Se trabaja sobre el siguiente dataset de <a href="https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset">Kaggle</a>, el mismo es un dataset muy completo y detallado con alrededor de 45.000 peliculas de todos los tiempos. 
